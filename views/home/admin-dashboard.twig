@@ -1,0 +1,160 @@
+{% extends  'layout/layout.twig'%}
+{% block content %}
+    {% include 'partials/top-nav.twig'%}
+    {% include 'partials/admin-bar.twig'%}
+    <!-- Start Dump Cards -->
+<div class="" style="margin-top:20px; margin-left:30px;  margin-right:30px;">
+  <div class="row">
+    <div class="col-md-9">
+       <div style="margin-right:20px;" class="card shadow">
+            <div class="row" >
+                <div  class="col-md-12">
+                   <table class="table table-responsive">
+    <thead class="table-light"> 
+        <tr>
+            <th class="text-center">#</th>
+            <th style="padding-left: 120px;">Name</th>
+            <th style="padding-left: 120px;">Date Uploaded</th>
+            <th style="padding-left: 120px;">Date Due</th>
+            <th style="padding-left: 120px;" class="text-right">Charge</th>
+            <th style="padding-left: 120px;" class="text-right">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center">1</td>
+            <td><img src="public/static/images/cover.png" width="150px" height="110px"></td>
+            <td style="padding-left: 130px">Develop</td>
+            <td style="padding-left: 130px">2013</td>
+            <td class="text-right">&#8373; 99,225</td>
+            <td class="td-actions text-right">
+              <button type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm " data-original-title="" title="" data-toggle="modal" data-target="#newads">
+                Edit
+              </button>
+              <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title="">
+                Delete
+                </button>
+            </td>
+        </tr>
+        <tr>
+          <td class="text-center">2</td>
+          <td><img src="public/static/images/cover.png" width="150px" height="110px"></td>
+          <td style="padding-left: 130px">Develop</td>
+          <td style="padding-left: 130px">2013</td>
+          <td class="text-right">&#8373; 99,225</td>
+          <td class="td-actions text-right">
+            <button type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm " data-original-title="" title="" data-toggle="modal" data-target="#newads">
+              Edit
+            </button>
+            <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title="">
+              Delete
+              </button>
+          </td>
+      </tr>
+        <tr>
+            <td class="text-center">3</td>
+            <td><img src="public/static/images/cover.png" width="150px" height="100px"></td>
+           
+            <td style="padding-left: 130px">Design</td>
+            <td style="padding-left: 130px">2012</td>
+            <td class="text-right">&#8373; 89,241</td>
+            <td class="td-actions text-right">
+              <button type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm " data-original-title="" title="" data-toggle="modal" data-target="#newads">
+                Edit
+              </button>
+              <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title="">
+                Delete
+                </button>
+            </td>
+          
+        </tr>
+        <tr>
+          <td class="text-center">4</td>
+          <td><img src="public/static/images/cover.png" width="150px" height="110px"></td>
+          <td style="padding-left: 130px">Design</td>
+          <td style="padding-left: 130px">2012</td>
+          <td class="text-right">&#8373; 89,241</td>
+          <td class="td-actions text-right">
+            <button type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm " data-original-title="" title="" data-toggle="modal" data-target="#newads">
+              Edit
+            </button>
+            <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title="">
+              Delete
+              </button>
+          </td>
+      </tr>
+
+    </tbody>
+</table>
+                </div>
+            </div>       
+    </div>
+    </div>
+        <div class="col-md-3">
+        <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Dumps</h5>
+                          <span class="h4 font-weight-bold mb-0">2845</span>
+                           </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="fas fa-dumpster"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                      <span class="text-wrap">Total dumps submitted on stuDUMP.</span>
+                  </p>
+                </div>
+                </div>
+
+
+        <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Ads</h5>
+                                             <span class="h4 font-weight-bold mb-0">2845</span>
+                                           </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-default text-white rounded-circle shadow">
+                        <i class="fab fa-buysellads"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                                        <span class="text-wrap">Total Ads published on stuDUMP.</span>
+                  </p>
+                </div>
+                </div>
+
+        <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Balance</h5>
+                                             <span class="h4 font-weight-bold mb-0">2845</span>
+                                           </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                        <i class="fas fa-hand-holding-usd"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                                        <span class="text-wrap">Total amount earned on Ads charge on stuDUMP.</span>
+                  </p>
+                </div>
+                </div>
+
+                    
+    </div>
+    </div>
+    </div> 
+    <!-- End Dump Cards -->
+
+
+
+{% endblock %}

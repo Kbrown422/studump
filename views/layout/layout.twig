@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="   stuDUMP is a platform where you can store any file online for easy sharing and accessibility. ">
+  <meta name="author" content="Team Payperlez">
+  <title>{{ stuDUMP }}</title>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/brand/logo.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="public/static/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="public/static/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="public/static/css/argon.css?v=1.2.0" type="text/css">
+</head>
+<body class="{{ bgColor }}"> 
+ <!-- Main content -->
+  <div class="main-content">
+    {% block content %}
+    {% endblock %}
+  </div>
+      <!-- Start footer -->
+  {% if footer == true %}
+<footer class="navbar" style="background-color:#20c997;">
+  <div class="container">
+   <div class="col-sm col-md-6">
+       <a href="https://payperlez.com" style="color:#fff;">&copy; Payperlez 2020</a>
+   </div>
+
+   <div class="col-md-6">
+             <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+
+
+               <li class="nav-item">
+                 <a href="https://facebook.com/myblogpay" class="nav-link" target="_blank">
+                   <i class="fab fa-facebook-f"></i>
+                 
+                 </a>
+               </li>
+
+               <li class="nav-item">
+                 <a href="https://twitter.com/myblogpay" class="nav-link" target="_blank">
+                   <i class="fab fa-twitter"></i>
+                 
+                 </a>
+               </li>
+
+                               <li class="nav-item">
+                 <a href="https://instagram.com/myblogpay" class="nav-link" target="_blank">
+                   <i class="fab fa-instagram"></i>
+                 
+                 </a>
+               </li>
+
+                               <li class="nav-item">
+                 <a href="https://wa.me/0578731785" class="nav-link" target="_blank">
+                   <i class="fab fa-whatsapp"></i>
+                 
+                 </a>
+               </li>
+             </ul>
+           </div>
+   </div>
+</footer>
+{% else %}
+{% endif %}
+
+<!-- Js to preview uploaded image in form -->
+<script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+ 
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+ 
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+<!-- Add dump Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        
+      <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add New Dump</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div  class="col-md-12">
+                  <form  method="POST"  action=""  enctype="multipart/form-data">
+                      <label>Title</label>
+                          <input type="#" name="title" class="form-control"></input><br>
+                      
+  
+                      <label>Description</label>
+                          <textarea name="descriptions" class="form-control" required></textarea><br>
+  
+                          <label>Upload Image</label><br>
+                          <div class="container">
+                              <input type="file" name="uploadfile"  accept="image/*" id="fileToUpload" onchange="readURL(this);" >
+                              
+                          </div><br>
+                          <div><img id="blah" src="" alt="" width="200px" height="150px"></div><br>
+{#   
+                          <label>Upload File</label><br>
+                          <div class="container">
+                              <input type="file" name="fileToUpload" id="fileToUpload">
+                          </div> #}
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" name="submit" class="btn btn-default">Submit</button>
+                    </div>
+                  </form>
+              </div>
+      </div>
+  
+
+      </div>
+  </div>
+  </div>
+  
+                              <!--About  Modal -->
+  <div class="modal fade" id="aboutstuDUMP" tabindex="-1" role="dialog" aria-labelledby="aboutstuDUMP" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="aboutstuDUMP">About stuDUMP</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+          stuDUMP is a platform where you can store any file online for easy sharing and accessibility. 
+          The platform is mainly used by students to store files on important information that could be of help to other students, 
+          but anyone is more than welcome to add any type of educational related file. 
+          The idea behind the platform is to make it more convenient for people to share or access educational files online.
+      </div>
+      </div>
+  </div>
+  </div>
+
+    <!-- Ads Modal -->
+    <div class="modal fade" id="newads" tabindex="-1" role="dialog" aria-labelledby="newadsTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="newadsTitle">New Advertisement</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div  class="col-md-12">
+                      <form>
+                            <label>Upload Image</label><br>
+                              <div class="container">
+                                  <input type="file" name="fileToUpload" id="fileToUpload">
+                              </div><br>
+                              <label>Charge</label>
+                              <input class="form-control" name="charges" placeholder="Add charges" type="number">
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default">Submit</button>
+          </div>
+          </div>
+      </div>
+      </div>
+</body>
+<!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="public/static/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="public/static/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="public/static/vendor/js-cookie/js.cookie.js"></script>
+  <script src="public/static/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="public/static/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Argon JS -->
+  <script src="public/static/js/argon.js?v=1.2.0"></script>
+</body>
+
+<!-- Core -->
+  <script src="public/static/vendor/jquery/jquery.min.js"></script>
+  <script src="public/static/vendor/popper/popper.min.js"></script>
+  <script src="public/static/vendor/bootstrap/bootstrap.min.js"></script>
+  <!-- Optional plugins -->
+  <!-- <script src="public/static/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js"></script> -->
+
+  <!-- Argon JS -->
+  <script src="public/static/js/argon.js"></script>
+  <script src="public/static/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="public/static/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="public/static/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="public/static/vendor/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="public/static/vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="public/static/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="public/static/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="public/static/vendor/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script>
+       $(document).ready(function(){
+          $('.dataTables_length').addClass('bs-select');
+           const report = function(){
+                let e, a = $("#result");
+
+                a.length && (e = {
+                    dom: "Bfrtip",
+                    info: false,
+                    pageLength: 10,
+                    lengthChange: false,
+                    select: true,
+                    buttons: [
+                        'copy', 
+                        { extend: 'csv', title: `Sales Report` }, 
+                        { extend: 'print', title: `Sales Report` },
+                    ],
+                    language: {
+                        paginate: {
+                            previous: "<i class='fas fa-angle-left'></i>",
+                            next: "<i class='fas fa-angle-right'></i>"
+                        }
+                    }
+                }, a.on("init.dt", function(){
+                    $('.dt-buttons .btn').removeClass('btn-secondary').addClass('btn-sm btn-default text-uppercase');
+                }).DataTable(e));
+            }();
+
+            $(".alert").delay(4000).slideUp(200, function() {
+                $(this).alert('close');
+            });
+        });
+    </script>
+</body>
+</html>

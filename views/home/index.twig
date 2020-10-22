@@ -1,0 +1,34 @@
+{% extends  'layout/layout.twig'%}
+{% block content %}
+    {% include 'partials/top-nav.twig'%}
+    {% include 'partials/bar.twig'%}
+<!-- Start Dump Cards -->
+<div class="" style="margin-top:40px; margin-left:50px; margin-right:50px;">
+  <div class="row">
+    <div class="col-md-9">
+       <div class="card shadow">
+            <div class="row">
+                <div  class="col-md-2">
+                    <img src="public/static/images/cover.png" class="img-fluid" style="margin:20px;" width="240" height="190px">
+                </div>
+
+                <div  class=" col-md-10 container" style="margin-top:20px;">
+                    <h4  style="margin-left:7px;">Title: </h4><br>
+                    <h4 style="margin-left:7px;">Description: </h4>
+                    
+                    <div style="text-align:center; margin-bottom:10px;">
+                    <button style="width:150px;" class="btn btn-success">Download</button>
+                    {# <button style="width:100px;" class="btn btn-default">View</button> #}
+                    </div>
+                </div>
+            </div>       
+    </div>
+    </div>
+    <!-- End Dump Cards -->
+    {% include 'partials/ads-panel.twig'%}
+  </div>
+</div>
+<!-- End Ads Cards -->
+                            
+<!-- End footer -->
+{% endblock %}
